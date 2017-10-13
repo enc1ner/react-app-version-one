@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div>
         <h1>My Product Store</h1>
-        <ProductList products={PRODUCTS} />  
+        <ProductList products={this.state.products} />  
       </div>
     );
   }
