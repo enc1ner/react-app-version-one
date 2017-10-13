@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-function ProductList (props) {
-    return (
-        <div>ProductList</div>
-    )
+class ProductList extends Component {
+    render () {
+        return (
+            <ul>
+                {
+                    this.props.products.map(product => (
+                        <li key={product.id}>
+                            {product.name} ({product.brand})
+                        </li>
+                    ))
+                }
+            </ul>
+        )};
 }
 
 ProductList.propTypes = {
